@@ -70,9 +70,8 @@ func FromBase10(d int, b2 int) (s string) {
 		if d == 0 {
 			break
 		}
-		s = strconv.Itoa(d % b2) + s
+		s = numMap[d % b2] + s
 		d = d / b2
-
 	}
 	return s
 }
